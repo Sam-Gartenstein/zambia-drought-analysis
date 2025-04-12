@@ -6,8 +6,57 @@
 2. Come up with a more intuitive way of calculating payout (a likelihood where we say the probability of getting a payout is X%)
 3. Attempt g-means and hope it works
 
-### For next weel
+### For next week
 -Talk about which ones to report, and which ones are the most intepretable (what to keep)
+
+---
+
+## Payout Balance Metric
+
+To evaluate how well the clustering minimizes **basis risk**, we first compute the **absolute deviation** from a 50% payout rate for each cluster-year pair:
+
+$$
+D_t^k = |P_t^k - 50|
+$$
+
+Where:
+
+- $P_t^k$ = Percentage of pixels receiving a payout in **cluster** $k$ during **year** $t$  
+- $D_t^k$ = Absolute deviation from the 50% balance point — **higher values indicate greater basis risk**
+
+
+### Payout Balance Index (PBI)
+
+We then transform this deviation into a **Payout Balance Index (PBI)** scaled between 0 and 100:
+
+$$
+PBI_{t,k} = \left(1 - \frac{D_t^k}{50} \right) \times 100
+$$
+
+- A value of **100** means perfect balance: all or none of the farmers in the cluster received payouts  
+- A value of **0** indicates a 50/50 split — the **worst-case scenario** for basis risk
+
+
+### Overall Clustering Quality
+
+To assess clustering quality across the entire dataset, we compute the **average PBI**:
+
+$$
+PBI_{\text{avg}} = \frac{1}{N} \sum_{t,k} PBI_{t,k}
+$$
+
+Where $N$ is the total number of (year × cluster) combinations.
+
+
+### Basis Risk Interpretation
+
+- A **PBI close to 100** reflects **low basis risk**: clusters are internally consistent — farmers in the same area experience similar insurance outcomes  
+- A **PBI near 0** reflects **high basis risk**: payout decisions vary significantly within clusters, indicating poor targeting
+
+This index provides a **clear, interpretable, and policy-relevant** measure of how well your spatial clustering aligns with actual drought impact.
+
+
+---
 
 ## Steps
 
