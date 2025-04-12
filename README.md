@@ -67,7 +67,9 @@ This index provides a **clear, interpretable, and policy-relevant** measure of h
 | Traditional Admins (n=34)  | 91.25%                    | Based on administrative boundaries  |
 | Non-Optimized K-Means (n=34)      | 90.52%                    | K-means equals number of administrative districts           |
 | Optimized K-Means (n=3)     | 80.57%                    | K-means optimized from Silloute Score         |
-| Optimized X-Means (n=34)     | X                   | X-means optimized          |
+| Optimized X-Means (n=34)     | 83.28%                   | X-means optimized          |
+| Payout Non-Optimized K-Means (n=34)     |      90.16%            | Clustered where Pixels Experience Payout Based on Insurance Payout Formula         |
+| Payout Optimized K-Means (n=3)     |      81.16%         | Clustered where Pixels Experience Payout Based on Insurance Payout Formula          |
 | Drought Indicator Optimized K-Means (n=33)     | X                   | K-means optimized from Silloute Score on Drought Indicator    |
 | Drought Indicator X-Means (n=34)     |      X               | X-means on Drought Indicator    |
 
