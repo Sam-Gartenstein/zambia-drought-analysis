@@ -56,6 +56,22 @@ Where $N$ is the total number of (year × cluster) combinations.
 This index provides a **clear, interpretable, and policy-relevant** measure of how well your spatial clustering aligns with actual drought impact.
 
 
+------
+
+## Initial Results 
+
+**Note**: Change drought indicator to payout 
+
+| Model               | $PBI_{\text{avg}}$    | Notes                              |
+|---------------------|----------------------|-------------------------------------|
+| Traditional Admins (n=34)  | 91.25%                    | Based on administrative boundaries  |
+| Non-Optimized K-Means (n=34)      | 90.52%                    | K-means equals number of administrative districts           |
+| Optimized K-Means (n=3)     | 80.57%                    | K-means optimized from Silloute Score         |
+| Optimized X-Means (n=34)     | X                   | X-means optimized          |
+| Drought Indicator Optimized K-Means (n=33)     | X                   | K-means optimized from Silloute Score on Drought Indicator    |
+| Drought Indicator X-Means (n=34)     |      X               | X-means on Drought Indicator    |
+
+
 ---
 
 ## Steps
@@ -116,20 +132,4 @@ This index provides a **clear, interpretable, and policy-relevant** measure of h
 **4 Run `X-Means Clustering Analysis `**
 
 - Loads `seasonal_precipitation_touse.feather` 
-
-------
-
-## Initial Results 
-
-**Note**: Change drought indicator to payout 
-
-| Model               | $D_{\text{avg}} $    | Notes                              |
-|---------------------|----------------------|-------------------------------------|
-| Traditional Admins (n=34)  | 35.83%                    | Based on administrative boundaries  |
-| Non-Optimized K-Means (n=34)      | 35.09%                    | K-means equals number of administrative districts           |
-| Optimized K-Means (n=3)     | 22.41%                    | K-means optimized from Silloute Score         |
-| Optimized X-Means (n=34)     | 27.14%                    | X-means optimized          |
-| Drought Indicator Optimized K-Means (n=33)     | 40.72%                    | K-means optimized from Silloute Score on Drought Indicator    |
-| Drought Indicator X-Means (n=34)     |      40.72%               | X-means on Drought Indicator    |
-
 
