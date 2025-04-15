@@ -9,6 +9,12 @@
 ### For next week
 -Talk about which ones to report, and which ones are the most intepretable (what to keep)
 
+**Notes**
+
+- We can go to about 10th as many places, only get a zonal basis risk increase by 10% (aka going from 90% to 80%)
+- Helps determination of trade off of basis risk and decreasing the number of data driven clusters 
+
+
 ---
 
 ## Payout Balance Metric
