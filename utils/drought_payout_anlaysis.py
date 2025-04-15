@@ -229,3 +229,16 @@ def compute_payout_balance_index(df, drought_percentage_column="drought_percenta
     df["deviation_from_50"] = np.abs(df[drought_percentage_column] - 50)
     df["payout_balance_index"] = (1 - ((50 - df["deviation_from_50"]) / 50)) * 100
     return df
+
+
+def filter_low_drought(df):
+    """
+    Filters the input DataFrame to include only rows where drought_percentage is equal to or greater than 50%.
+
+    Parameters:
+    df (pd.DataFrame): Input DataFrame containing a 'drought_percentage' column.
+
+    Returns:
+    pd.DataFrame: Filtered DataFrame.
+    """
+    return df[df["drought_percentage"] >= 50]
