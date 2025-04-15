@@ -49,9 +49,11 @@ This index provides a **clear, interpretable, and policy-relevant** measure of h
 
 ------
 
-## Initial Results 
+##  Results 
 
-**Note**: Change drought indicator to payout 
+### Primary Analysis
+
+The primary analysis uses all data. All optimization methods use the Silloute Score. 
 
 | Model                               | $PBI_{\text{avg}}$ | Notes                                                                 |
 |------------------------------------|--------------------|-----------------------------------------------------------------------|
@@ -60,6 +62,18 @@ This index provides a **clear, interpretable, and policy-relevant** measure of h
 | Optimized K-Means (n=3)            | 80.57%             | K-Means clustering with number of clusters selected via Silhouette Score. |
 | Payout Non-Optimized K-Means (n=34)| 90.16%             | Pixels clustered by K-Means; evaluated using the insurance payout formula. |
 | Payout Optimized K-Means (n=3)     | 81.16%             | Pixels clustered by optimized K-Means; evaluated using the insurance payout formula. |
+
+### Filtered Data 
+
+For the sub-analysis, I filtered out clusters where less than 50% of pixels experience a drought. 
+
+| Model                               | $PBI_{\text{avg}}$ | Notes                                                                 |
+|------------------------------------|--------------------|-----------------------------------------------------------------------|
+| Traditional Admins (n=34)          | 79.36%             | Based on existing administrative district boundaries.                 |
+| Non-Optimized K-Means (n=34)       | 78.12%             | K-Means clustering with number of clusters fixed to match admin units.|
+| Optimized K-Means (n=3)            | 65.75%             | K-Means clustering with number of clusters selected via Silhouette Score. |
+| Payout Non-Optimized K-Means (n=34)| 77.77%             | Pixels clustered by K-Means; evaluated using the insurance payout formula. |
+| Payout Optimized K-Means (n=3)     | 61.88%             | Pixels clustered by optimized K-Means; evaluated using the insurance payout formula. |
 
 
 ---
