@@ -9,11 +9,22 @@
 ### For next week
 -Talk about which ones to report, and which ones are the most intepretable (what to keep)
 
-**Notes**
+**Notes 4-15-25**
 
 - We can go to about 10th as many places, only get a zonal basis risk increase by 10% (aka going from 90% to 80%)
 - Helps determination of trade off of basis risk and decreasing the number of data driven clusters 
+- None of the otpimization based methods give us better results than the admin boundaries -> goes counter to Bemani found in Kenya where they found improvements -> some of the boundaries might already fall along natural features with differecnes in weather patterns -> objectively it's quite good
+- Worth mentioning adding in NDVI or crop cuts assuming there is already modelled data
+-To include my assingment/draft
+-Show table, maps side by side, how different are the k-means clusters vs the admin boundaries visiually
+-Practical is that optimization methods like x-means g-means don't work for this
+-Social Science ideas -> why we are seeing the results we do (aka why admin boundaries work so well) and presenting a statistic that has a economically meaningful interpretaiton
+-Address the type of basis risk I am addressing, and show the time series stuff I show (aka the heat maps)
+-Social science look at this from the perspective of a designer and motivating is literature from Dan's team, Cater's team
 
+**One More Thing**
+
+- Look at the 50% above cut off 
 
 ---
 
