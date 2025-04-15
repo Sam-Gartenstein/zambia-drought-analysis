@@ -81,6 +81,8 @@ This sub-analysis filters out clusters in which fewer than 50% of pixels experie
 
 ## Steps
 
+**TODO**: Finish this 
+
 **1a. Run `Rainfall Extraction.ipynb`**
 - Extracts rainfall data at 5-day intervals (e.g., Jan 1, Jan 6, etc.) for each pixel
 - Output files are named like:
@@ -130,13 +132,21 @@ This sub-analysis filters out clusters in which fewer than 50% of pixels experie
 
 - Exports `seasonal_precipitation_touse.feather` to `data/precipitation data` (**TODO**: Change name)
 
-**3 Run `K-Means Clustering Analysis `**
+**3 Run ` Clustering Analysis `**
+
+- Loads 
+  
+  - `seasonal_precipitation_touse.feather`
+  - `zambia_admin2_boundaries.geojson`
+
+**4 Run `K-Means Clustering Analysis `**
 
 - Loads `seasonal_precipitation_touse.feather` 
 
-**4 Run `X-Means Clustering Analysis `**
+**5 Run `Payout Clustering Analysis `**
 
 - Loads `seasonal_precipitation_touse.feather` 
+
 
 
 ---- 
