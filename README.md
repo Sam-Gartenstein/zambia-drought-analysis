@@ -57,7 +57,7 @@ The primary analysis includes all available data. Optimization methods, where ap
 
 | **Model**                               | $PBI_{\text{avg}}$ | **Notes**                                                                 |
 |------------------------------------|--------------------|-----------------------------------------------------------------------|
-| **Traditional Admins** ($\text{n}=34$)          | $91.25 %$              | Based on existing administrative district boundaries.                 |
+| **Traditional Admins** ($\text{n}=34$)          | $91.25 \%$              | Based on existing administrative district boundaries.                 |
 | **Non-Optimized K-Means** ($\text{n}=34$)       | $90.52$%             | K-Means clustering with number of clusters fixed to match admin units.|
 | **Optimized K-Means** ($\text{n}=3$)            | $80.57$%             | K-Means clustering with number of clusters selected via Silhouette Score. |
 | **Payout Non-Optimized K-Means** ($\text{n}=34$)| $90.16$%             | Pixels clustered by K-Means; evaluated using the insurance payout formula. |
