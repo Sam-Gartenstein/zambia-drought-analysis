@@ -55,13 +55,13 @@ This index provides a **clear, interpretable, and policy-relevant** measure of h
 
 The primary analysis includes all available data. Optimization methods, where applied, use the Silhouette Score to determine the optimal number of clusters.
 
-| **Model**                               | $PBI_{\text{avg}}$ | **Notes**                                                                 |
+| **Model**                               | **$PBI_{\text{avg}}$** | **Notes**                                                                 |
 |------------------------------------|--------------------|-----------------------------------------------------------------------|
 | Traditional Admins (n=34)          | 91.25%              | Based on existing administrative district boundaries.                 |
 | Non-Optimized K-Means (n=34)       | 90.52%             | K-Means clustering with number of clusters fixed to match admin units.|
-| **Optimized K-Means** ($\text{n}=3$)            | $80.57$%             | K-Means clustering with number of clusters selected via Silhouette Score. |
-| **Payout Non-Optimized K-Means** ($\text{n}=34$)| $90.16$%             | Pixels clustered by K-Means; evaluated using the insurance payout formula. |
-| **Payout Optimized K-Means** ($\text{n}=3$)     | $81.16$%             | Pixels clustered by optimized K-Means; evaluated using the insurance payout formula. |
+| Optimized K-Means (n=3)            | 80.57%             | K-Means clustering with number of clusters selected via Silhouette Score. |
+| Payout Non-Optimized K-Means (n=34)| 90.16%             | Pixels clustered by K-Means; evaluated using the insurance payout formula. |
+| Payout Optimized K-Means (n=3)     | 81.16%             | Pixels clustered by optimized K-Means; evaluated using the insurance payout formula. |
 
 ### Filtered Data 
 
