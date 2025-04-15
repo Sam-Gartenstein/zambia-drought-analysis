@@ -57,7 +57,7 @@ The primary analysis uses all data. All optimization methods use the Silloute Sc
 
 | Model                               | $PBI_{\text{avg}}$ | Notes                                                                 |
 |------------------------------------|--------------------|-----------------------------------------------------------------------|
-| Traditional Admins (n=34)          | 91.25%             | Based on existing administrative district boundaries.                 |
+| **Traditional Admins** ($n=34$)          | 91.25%             | Based on existing administrative district boundaries.                 |
 | Non-Optimized K-Means (n=34)       | 90.52%             | K-Means clustering with number of clusters fixed to match admin units.|
 | Optimized K-Means (n=3)            | 80.57%             | K-Means clustering with number of clusters selected via Silhouette Score. |
 | Payout Non-Optimized K-Means (n=34)| 90.16%             | Pixels clustered by K-Means; evaluated using the insurance payout formula. |
