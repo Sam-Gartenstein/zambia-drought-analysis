@@ -58,7 +58,6 @@ This index provides a **clear, interpretable, and policy-relevant** measure of h
 | Traditional Admins (n=34)          | 91.25%             | Based on existing administrative district boundaries.                 |
 | Non-Optimized K-Means (n=34)       | 90.52%             | K-Means clustering with number of clusters fixed to match admin units.|
 | Optimized K-Means (n=3)            | 80.57%             | K-Means clustering with number of clusters selected via Silhouette Score. |
-| Optimized X-Means (n=34)           | 83.28%             | X-Means clustering with automatic optimization of the number of clusters. |
 | Payout Non-Optimized K-Means (n=34)| 90.16%             | Pixels clustered by K-Means; evaluated using the insurance payout formula. |
 | Payout Optimized K-Means (n=3)     | 81.16%             | Pixels clustered by optimized K-Means; evaluated using the insurance payout formula. |
 
