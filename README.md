@@ -53,11 +53,11 @@ This index provides a **clear, interpretable, and policy-relevant** measure of h
 
 ### Primary Analysis
 
-The primary analysis uses all data. All optimization methods use the Silloute Score. 
+The primary analysis includes all available data. Optimization methods, where applied, use the Silhouette Score to determine the optimal number of clusters.
 
 | Model                               | $PBI_{\text{avg}}$ | Notes                                                                 |
 |------------------------------------|--------------------|-----------------------------------------------------------------------|
-| **Traditional Admins** ($n=34$)          | 91.25%             | Based on existing administrative district boundaries.                 |
+| **Traditional Admins** ($n=34$)          | $91.25 \%$             | Based on existing administrative district boundaries.                 |
 | Non-Optimized K-Means (n=34)       | 90.52%             | K-Means clustering with number of clusters fixed to match admin units.|
 | Optimized K-Means (n=3)            | 80.57%             | K-Means clustering with number of clusters selected via Silhouette Score. |
 | Payout Non-Optimized K-Means (n=34)| 90.16%             | Pixels clustered by K-Means; evaluated using the insurance payout formula. |
@@ -65,7 +65,8 @@ The primary analysis uses all data. All optimization methods use the Silloute Sc
 
 ### Filtered Data 
 
-For the sub-analysis, I filtered out clusters where less than 50% of pixels experience a drought. 
+This sub-analysis filters out clusters in which fewer than 50% of pixels experienced a drought, focusing only on clusters with substantial drought exposure.
+
 
 | Model                               | $PBI_{\text{avg}}$ | Notes                                                                 |
 |------------------------------------|--------------------|-----------------------------------------------------------------------|
