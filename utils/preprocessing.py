@@ -2,6 +2,40 @@ import pandas as pd
 import geopandas as gpd
 from tqdm import tqdm
 from shapely.geometry import Point
+import ee
+import geemap
+
+
+def load_fao_gaul_data(admin_level="level2", country_name="Zambia"):
+    """
+    Load GAUL data from GEE for a given country and admin level, return as GeoDataFrame.
+
+    Parameters:
+        admin_level (str): 'level0', 'level1', or 'level2'
+        country_name (str): e.g., 'Zambia'
+
+    Returns:
+        tuple: (GeoDataFrame, list of admin names)
+    """
+    try:
+        fc = ee.FeatureCollection(f"FAO/GAUL/2015/{admin_level}")
+        fc_filtered = fc.filter(ee.Filter.eq("ADM0_NAME", country_name))
+
+        name_field = {
+            "level0": "ADM0_NAME",
+            "level1": "ADM1_NAME",
+            "level2": "ADM2_NAME"
+        }.get(admin_level, "ADM2_NAME")
+
+        counties_list = fc_filtered.aggregate_array(name_field).getInfo()
+
+        # Convert Earth Engine FeatureCollection to GeoDataFrame
+        gdf = geemap.ee_to_gdf(fc_filtered)
+
+        return gdf, counties_list
+    except Exception as e:
+        print(f"Error: {e}")
+        return None, []
 
 
 def subset_precip_data(precip_xr, time_ranges):
