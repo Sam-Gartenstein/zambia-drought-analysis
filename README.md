@@ -132,18 +132,25 @@ This sub-analysis filters out clusters in which fewer than 50% of pixels experie
 
 - Exports `seasonal_precipitation_touse.feather` to `data/precipitation data` (**TODO**: Change name)
 
-**3 Run ` Clustering Analysis `**
+**3 Run ` Admin2 Analysis Pixel Level `**
 
-- Loads 
+- Loads the following:
   
   - `seasonal_precipitation_touse.feather`
   - `zambia_admin2_boundaries.geojson`
 
+- Calculates drought variation and average $PBI$ for each administrative boundary
+- Calculates summary statistics and create plot of historical average rainfall by district (1982-2024) 
+
 **4 Run `K-Means Clustering Analysis `**
 
-- Loads `seasonal_precipitation_touse.feather` 
+- Loads `seasonal_precipitation_touse.feather`
+- Performs Non-optimized K-means clustering (number of administrative boundaries equal to clusters)
+- Peforms Optimized K-means clustering (number of clusters optimized from Silloute Score)
+- Calcualtes average $PBI$ for both types of clustering  
 
 **5 Run `Payout Clustering Analysis `**
 
-- Loads `seasonal_precipitation_touse.feather` 
+- Loads `seasonal_precipitation_touse.feather`
+- 
 
