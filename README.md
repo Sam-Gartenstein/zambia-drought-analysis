@@ -152,5 +152,7 @@ This sub-analysis filters out clusters in which fewer than 50% of pixels experie
 **5 Run `Payout Clustering Analysis `**
 
 - Loads `seasonal_precipitation_touse.feather`
-- 
+- Calculates payot values for each cluster (as defined in the Notebook)
+- Performs non-optimized and optimized K-means clustering
+- Calcualtes average $PBI$ for both types of clustering  
 
